@@ -6,32 +6,35 @@ var rl = readline.createInterface({
 });
 
 var contact = {};
+var contactName;
+var contactAge;
+var contactFavoriteColor;
 
 function getName () {
   rl.question('What is your name? ', function (name) {
-	contact.name = name;
+	contactName = name;
 	getAge();
   });
 }
 
 function getAge () {
   rl.question('What is your age? ', function (age) {
-	contact.age = age;
+	contactAge = age;
 	getFavoriteColor();
   });
 }
 
 function getFavoriteColor () {
   rl.question('What is your favorite color? ', function (favoriteColor) {
-	contact.favoriteColor = favoriteColor;
+	contactFavoriteColor = favoriteColor;
 	farewell();
   });
 }
 
 function farewell () {
-  console.log('Your name is', contact.name);
-  console.log('Your age is', contact.age);
-  console.log('Your favoriteColor is', contact.favoriteColor);
+  console.log('Your name is', contactName);
+  console.log('Your age is', contactAge);
+  console.log('Your favoriteColor is', contactFavoriteColor);
   console.log('Bye now');
   rl.close();
 }
