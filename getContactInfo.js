@@ -10,6 +10,8 @@ var contactName;
 var contactAge;
 var contactFavoriteColor;
 
+getName();
+
 function getName () {
   rl.question('What is your name? ', function (name) {
 	contactName = name;
